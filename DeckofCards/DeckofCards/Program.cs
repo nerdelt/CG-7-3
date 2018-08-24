@@ -8,7 +8,8 @@ namespace DeckofCards
         {
 
             //asks for user input
-            Console.Write("Pick a card, any card...\n\nTo pick, please type PICK: ");
+            Console.Write("Pick a card, any card...\n" +
+                "\nTo pick, please type PICK: ");
             string c = Console.ReadLine();
 
             //create new deck object
