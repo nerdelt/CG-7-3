@@ -25,7 +25,7 @@ namespace DeckofCards
     class Deck
     {
         //creates new Random outside method to draw from
-        public static Random draw;
+        public static Random draw = new Random();
 
         //creates new deck to fill with 52 cards
         public string[] newDeck = new string[52];
@@ -44,17 +44,17 @@ namespace DeckofCards
             for (int i = 0; i < 4; i++)
             {
                 for (int j = 0; j < 13; j++)
-                 {
+                {
                     newCard.CardName(j, i);
                     newDeck[d++] += newCard;
-                 }
-            }   
+                }
+            }
         }
+
 
         //method to draw random card
         public string CardDraw(string cardPick)
         {
-            draw = new Random();
             cardPick = newDeck[draw.Next(d)];
             return cardPick;
         }
